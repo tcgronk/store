@@ -14,6 +14,7 @@ render(){
         <MenuOptions list={list1}/>
         <p className='Accent'>____</p>
         <MenuOptions list={list2}/>
+        <br/><br/><br/><br/>
     </div>
   );
 }

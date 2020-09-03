@@ -4,3 +4,6 @@ li > a:visited {
   text-decoration: none;
   color: black;
 }
+.MenuOptions{
+  padding-bottom: 5%;
+}

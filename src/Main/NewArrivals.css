@@ -1,6 +1,8 @@
 .Main {
-  width: 100%;
+  margin-left: 20%;
   height: 100%;
+   border-left: black solid 1px
+
 }
 
 .Title{
