@@ -1,0 +1,16 @@
+
+.ProductPreview{
+    max-width: 90%;
+    height: auto;
+
+}
+
+
+.InventoryPreview{
+    display: flex;
+    flex-direction: row;
+    align-content: center;    
+    justify-content: space-evenly;
+    width: 95%;
+    margin: 0 auto;
+} 

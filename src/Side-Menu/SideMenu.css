@@ -1,0 +1,12 @@
+.SideMenu {
+  width: 20%;
+  margin: 0 auto;
+  padding-bottom: 0;
+  border-right: black solid 1px
+}
+.Logo {
+  width: 100%;
+}
+.Accent{
+    color: gainsboro;
+}
