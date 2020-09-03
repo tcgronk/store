@@ -1,14 +1,13 @@
 import React from 'react';
 import SideMenu from './Side-Menu/SideMenu'
+import TopMenu from "./TopMenu/TopMenu"
 import Main from "./Main/Main"
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      {/* <header className="App-header">
-        Tailor & Chief
-      </header> */}
+      <TopMenu/>
       <p className='Sales-Banner'>
         Free Shipping on all sales!
       </p>

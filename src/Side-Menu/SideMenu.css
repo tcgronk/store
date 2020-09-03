@@ -1,12 +1,38 @@
-.SideMenu {
-  width: 20%;
-  margin: 0 auto;
-  padding-bottom: 0;
-  border-right: black solid 1px
+.SideMenu{
+  display: none;
 }
-.Logo {
-  width: 100%;
+.Logo{
+  height: 5px;
 }
 .Accent{
     color: gainsboro;
 }
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+
+@media(min-width: 900px){
+  .SideMenu {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin: 0 auto;
+    padding-bottom: 0;
+    border-right: black solid 1px
+  }
+  .Logo {
+  width: 100%;
+  height: auto;
+}
+ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  height: 200px;
+}
+
+}
+

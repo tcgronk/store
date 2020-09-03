@@ -1,0 +1,15 @@
+.TopMenu{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px 0;
+    width: 100%;
+}
+.TopLogo{
+    height: 40px;
+}
+
+@media(min-width: 900px){
+    .TopMenu{
+        display: none;
+    }
+}

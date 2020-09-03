@@ -1,6 +1,6 @@
 
 .ProductPreview{
-    max-width: 90%;
+    max-width: 85%;
     height: auto;
 
 }
@@ -14,3 +14,9 @@
     width: 95%;
     margin: 0 auto;
 } 
+
+@media (min-width: 900px){
+.ProductPreview:hover{
+    transform: scale(1.1)
+    }
+}
