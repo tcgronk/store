@@ -1,5 +1,7 @@
 import React from "react";
 import "./FeaturedItem.css"
+import { Link } from "react-router-dom";
+
 // import Zoom from "react-img-zoom"
 
 class FeaturedItem extends React.Component {
@@ -18,6 +20,7 @@ class FeaturedItem extends React.Component {
             <h4>{item.brand}</h4>
             <p className='Accent'>____</p>
             <h3>{item.price}</h3>
+            <form className='form'>
             <select>
                 {sizes.map((size)=>(
                     <>
@@ -28,6 +31,11 @@ class FeaturedItem extends React.Component {
                     </>
                 ))}
             </select>
+            <br/>
+            <button>Add to Cart</button>
+            </form>
+            <br/>
+            <Link to={`/products/:${item.id}`}> See Full Details</Link>
             </div>
             </div>
         </div>
