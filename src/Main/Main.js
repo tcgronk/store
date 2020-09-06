@@ -3,7 +3,6 @@ import NewArrivals from "./NewArrivals";
 import QuoteBanner from "./QuoteBanner"
 import FeaturedItem from "./FeaturedItem";
 import BlueBlouse1 from "./BlueBlouse1.jpg";
-import Footer from "./Footer";
 import EmailForm from "./EmailForm"
 
 class Main extends React.Component {
@@ -22,7 +21,6 @@ class Main extends React.Component {
           <QuoteBanner/>
           <EmailForm/>
           <FeaturedItem item={item}/>
-          <Footer/>
           </div>
 
     );

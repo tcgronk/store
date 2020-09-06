@@ -4,12 +4,15 @@ import SideMenu from './Side-Menu/SideMenu'
 import TopMenu from "./TopMenu/TopMenu"
 import Main from "./Main/Main"
 import './App.css';
+import Footer from "./Main/Footer";
+import Product from "./Main/Product"
 
 export default class App extends React.Component {
   renderMainRoutes() {
-    return (<Switch>
+    return (<>
         <Route exact path="/" component={Main} />
-        </Switch>
+        <Route path="/products" component={Product}/>
+        </>
     );
   }
   render(){
@@ -21,8 +24,10 @@ export default class App extends React.Component {
       </p>
       <div className='Outline'>
       <SideMenu/>
-      <span>{this.renderMainRoutes()}</span>
       </div>
+      <span>{this.renderMainRoutes()}</span>
+      <Footer/>
+
     </div>
   );
 }

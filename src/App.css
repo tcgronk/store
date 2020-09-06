@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  
+
 }
 *{
   font-family: 'Playfair Display', serif;
@@ -16,7 +16,9 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+.MainLayout{
+  display: block;
+}
 .App-header {
   background-color:#F3EEE8;
   min-height: 100px;

@@ -1,6 +1,7 @@
-.Main {
+.Main, .Product{
   height: 100%;
   padding: 20px 0;
+
 }
 
 .Title{
@@ -10,7 +11,7 @@
 
 
 @media(min-width:900px){
-  .Main{
+  .Main,.Product{
     margin-left: 20%;
     border-left: black solid 1px
 

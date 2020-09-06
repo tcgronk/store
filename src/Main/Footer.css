@@ -1,3 +1,10 @@
-.Footer{
-    border-top: black solid 1px
+.Footer {
+  border-top: black solid 1px;
+}
+
+@media (min-width: 900px) {
+  .Footer {
+    margin-left: 20%;
+    padding: 20px;
+  }
 }
