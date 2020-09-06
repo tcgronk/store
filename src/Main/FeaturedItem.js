@@ -1,7 +1,14 @@
 import React from "react";
 import "./FeaturedItem.css"
 import { Link } from "react-router-dom";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faLongArrowAltRight
+  } from "@fortawesome/free-solid-svg-icons";
+  import { library } from "@fortawesome/fontawesome-svg-core";
+  library.add(
+    faLongArrowAltRight
+  )
 // import Zoom from "react-img-zoom"
 
 class FeaturedItem extends React.Component {
@@ -23,19 +30,19 @@ class FeaturedItem extends React.Component {
             <form className='form'>
             <select>
                 {sizes.map((size)=>(
-                    <>
+                    <option key={size.id}>
                     {size.count > 0
-                    ? <option>{size.size}</option>
+                    ? size.size
                     :null
                     }
-                    </>
+                    </option>
                 ))}
             </select>
             <br/>
             <button>Add to Cart</button>
             </form>
             <br/>
-            <Link to={`/products/:${item.id}`}> See Full Details</Link>
+            <Link to={`/products/:${item.id}`}> See Full Details <FontAwesomeIcon icon={faLongArrowAltRight}></FontAwesomeIcon></Link>
             </div>
             </div>
         </div>

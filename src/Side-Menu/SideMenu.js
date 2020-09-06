@@ -4,11 +4,11 @@ import MenuOptions from "./MenuOptions"
 import { Link } from "react-router-dom";
 import "./SideMenu.css"
 import {
-  faShoppingCart
+  faShoppingCart,
 } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
 library.add(
-  faShoppingCart
+  faShoppingCart,
 )
 class SideMenu extends React.Component{
 render(){

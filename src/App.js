@@ -1,10 +1,18 @@
-import React from 'react';
+import React from "react";
+import { Route, Switch } from "react-router-dom";
 import SideMenu from './Side-Menu/SideMenu'
 import TopMenu from "./TopMenu/TopMenu"
 import Main from "./Main/Main"
 import './App.css';
 
-function App() {
+export default class App extends React.Component {
+  renderMainRoutes() {
+    return (<Switch>
+        <Route exact path="/" component={Main} />
+        </Switch>
+    );
+  }
+  render(){
   return (
     <div className="App">
       <TopMenu/>
@@ -13,10 +21,10 @@ function App() {
       </p>
       <div className='Outline'>
       <SideMenu/>
-      <Main/>
+      <span>{this.renderMainRoutes()}</span>
       </div>
     </div>
   );
 }
+}
 
-export default App;

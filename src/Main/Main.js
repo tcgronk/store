@@ -14,7 +14,7 @@ class Main extends React.Component {
       price: "$168.00",
       image: `${BlueBlouse1}`,
       brand: "Ecru",
-      sizes: [{size: "S", count: 2},{size: "M", count: 2},{size: "L", count: 2}]
+      sizes: [{id: 1, size: "S", count: 2},{id: 2, size: "M", count: 2},{id: 3, size: "L", count: 2}]
     }
     return (
       <div className="Main">

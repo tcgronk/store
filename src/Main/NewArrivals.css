@@ -1,11 +1,18 @@
 .Main {
-  margin-left: 20%;
   height: 100%;
-   border-left: black solid 1px
-
+  padding: 20px 0;
 }
 
 .Title{
     height: 50px;
     margin-bottom: 2%;
+}
+
+
+@media(min-width:900px){
+  .Main{
+    margin-left: 20%;
+    border-left: black solid 1px
+
+  }
 }
