@@ -1,0 +1,23 @@
+.EmailForm{
+    margin: 25px auto;
+    padding: 25px;
+    height: 100px;
+    width: 80%;
+    background-color: #F8F5EC;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    color: #0B1D6F;
+    align-items: center;
+}
+input{
+    max-width: 200px;
+    font-size: 18px;
+    color: #0B1D6F;
+}
+button{
+    font-size: 18px;
+    color: #0B1D6F;
+}
