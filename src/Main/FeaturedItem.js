@@ -16,8 +16,8 @@ import {
 class FeaturedItem extends React.Component {
     static contextType = ApiContext; 
     state={
-        item:{id: this.props.item.id,
-        name: this.props.item.name,
+        item:{id: this.props.item[0].id,
+        name: this.props.item[0].name,
         size: 'S',
         count: 1,
         price: 198.07}
@@ -29,11 +29,11 @@ class FeaturedItem extends React.Component {
     }
     handleAddFeaturedItem=(e)=>{
         e.preventDefault();
-        console.log(this.state.item)
         this.context.handleAddItem(this.state.item)
     }
   render() {
       let item=this.props.item[0]
+      console.log(item)
       let sizes=this.props.item[0].sizes
     return (
       <div className="FeaturedItem">

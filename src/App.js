@@ -23,7 +23,7 @@ export default class App extends React.Component {
       item: {id:42, size: 'L', name: 'top', count: 1, price: 198.07}}
     ],
     inventory: [      {
-      id: 123,
+      id: 1,
       name: "Silk Ruffle Blouse",
       price: "$168.00",
       image: `${BlueBlouse1}`,

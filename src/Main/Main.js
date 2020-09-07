@@ -10,7 +10,7 @@ class Main extends React.Component {
 
   render() {
     let item=[{
-      id: 123,
+      id: 1,
       name: "Silk Ruffle Blouse",
       price: "$168.00",
       image: `${BlueBlouse1}`,
