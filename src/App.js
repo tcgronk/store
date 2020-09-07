@@ -40,16 +40,15 @@ export default class App extends React.Component {
   renderMainRoutes() {
     return (<>
         <Route exact path="/" component={Main} />
-        <Route path="/products" component={Products}/>
+        <Route path="/products/:filter" component={Products}/>
         <Route path="/product" component={Product}/>
         <Route path="/cart" component={Cart}/>
-
         </>
     );
   }
   render(){
     let cartTotal= this.state.cartItems.map((cartItem)=>(cartItem.item.count)).reduce((a,b)=>a+b,0)
-
+    
   return (
     <ApiContext.Provider
     value={{
