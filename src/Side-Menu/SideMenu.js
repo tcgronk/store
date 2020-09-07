@@ -12,7 +12,7 @@ library.add(
 )
 class SideMenu extends React.Component{
 render(){
-    let list1=[{icon: faShoppingCart, name: 'Cart'}, {name: "Log in"}, {name: "Create Account"}]
+    let list1=[{icon: faShoppingCart, name: 'Cart',cart: true}, {name: "Log in",product: false}, {name: "Create Account",product: false}]
     let list2=[{name: "New Arrivals"}, {name: "Female Founder"},{name:  "Boss Lady"},{name: "Trend Setter"},{name: "Lounge"}]
   return (
     <div className="SideMenu">

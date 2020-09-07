@@ -1,4 +1,4 @@
-.Main, .Product{
+.Main{
   height: 100%;
   padding: 20px 0;
 
@@ -11,7 +11,7 @@
 
 
 @media(min-width:900px){
-  .Main,.Product{
+  .Main{
     margin-left: 20%;
     border-left: black solid 1px
 
