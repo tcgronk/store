@@ -1,27 +1,29 @@
 import React from "react";
 import ApiContext from "../ApiContext"
+import "./Cart.css"
 
 class Cart extends React.Component {
-
     static contextType = ApiContext;
 
   render() {
-
     let items=this.context.cartItems
+    let total=(this.context.cartTotalDollars).toFixed(2)
     return (
       <div className="Main">
           <h1 className="Title">
-              Cart
+              Your Cart
           </h1>
-          <h2>Items:</h2>
             {items.map((item)=>(
-                <p id={item.item.id}>
+                <div id={item.item.id} className="CartItem">
                 <p>Product Name: {item.item.name}</p>
                 <p>Size: {item.item.size}</p>
-                <p >{item.item.count}</p>
+                <p >{item.item.count} </p>
+                <p>${(item.item.price).toFixed(2)}</p>
                 <button id= {item.id} onClick={(e)=> this.context.handleDeleteItem(e)}>Delete</button>
-                </p>
+                
+                </div>
             ))}
+            <p>Your Total: ${total}</p>
                 </div>
     );
   }

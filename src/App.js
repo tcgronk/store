@@ -18,9 +18,9 @@ import StripePant1 from "./Main/StripePant1.jpg";
 export default class App extends React.Component {
   state={
     cartItems: [{id: 0,
-      item: {id:1, name: 'shirt', size: 'S', count: 1}},
+      item: {id:1, name: 'shirt', size: 'S', count: 1, price: 168.50}},
       {id: 1,
-      item: {id:42, size: 'L', name: 'top', count: 1}}
+      item: {id:42, size: 'L', name: 'top', count: 1, price: 198.07}}
     ],
     inventory: [      {
       id: 123,
@@ -77,7 +77,7 @@ export default class App extends React.Component {
   }
   render(){
     let cartTotal= this.state.cartItems.map((cartItem)=>(cartItem.item.count)).reduce((a,b)=>a+b,0)
-    
+    let cartTotalDollars= this.state.cartItems.map((cartItem)=>(cartItem.item.price)).reduce((a,b)=>a+b,0)
   return (
     <ApiContext.Provider
     value={{
@@ -85,6 +85,7 @@ export default class App extends React.Component {
       handleDeleteItem: this.handleDeleteItem,
       handleAddItem: this.handleAddItem,
       cartTotal: cartTotal,
+      cartTotalDollars: cartTotalDollars,
       inventory:this.state.inventory
     }}
   >

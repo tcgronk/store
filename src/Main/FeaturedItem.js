@@ -19,7 +19,8 @@ class FeaturedItem extends React.Component {
         item:{id: this.props.item.id,
         name: this.props.item.name,
         size: 'S',
-        count: 1}
+        count: 1,
+        price: 198.07}
     }
     handleInputChange=(e)=>{
         let newItem=this.state.item

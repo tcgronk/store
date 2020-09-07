@@ -8,7 +8,6 @@ class Product extends React.Component {
   render() {
     let id= parseInt(this.props.match.params.id.slice(1))
     let product=this.context.inventory.filter((invent)=>invent.id===id)
-    console.log(product)
     return (
       <div className="Main">
           {/* <h2>{product[0].name}</h2>
