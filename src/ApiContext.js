@@ -4,5 +4,6 @@ export default React.createContext({
     cartItems: [],
     handleDeleteItem: () => {},
     handleAddItem:()=>{},
-    cartTotal: ''
+    cartTotal: '',
+    inventory: []
 });

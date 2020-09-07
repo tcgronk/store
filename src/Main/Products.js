@@ -44,7 +44,7 @@ class Product extends React.Component {
             filter: "New Arrivals"
           },
       ];
-      let name=`${this.props.location.pathname.slice(10)}`
+      let name=this.props.match.params.filter
       let products=newArrivals.filter((newArrival)=>newArrival.filter===name)
     return (
       <div className="Main">

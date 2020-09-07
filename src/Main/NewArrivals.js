@@ -9,7 +9,7 @@ class NewArrivals extends React.Component {
   render() {
     let newArrivals = [
       {
-        id: 1,
+        id: 123,
         name: "Silk Ruffle Blouse",
         price: "$168.00",
         image: `${BlueBlouse1}`,

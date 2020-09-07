@@ -9,6 +9,9 @@ import Product from "./Main/Product"
 import Products from "./Main/Products"
 import Cart from "./Main/Cart"
 import ApiContext from "./ApiContext"
+import BlueBlouse1 from "./Main/BlueBlouse1.jpg";
+import WhiteBlouse1 from "./Main/WhiteBlouse1.jpg";
+import StripePant1 from "./Main/StripePant1.jpg";
 
 // need to write code to reduce inventory for purchased stock
 
@@ -19,7 +22,33 @@ export default class App extends React.Component {
       {id: 1,
       item: {id:42, size: 'L', name: 'top', count: 1}}
     ],
-    
+    inventory: [      {
+      id: 123,
+      name: "Silk Ruffle Blouse",
+      price: "$168.00",
+      image: `${BlueBlouse1}`,
+      brand: "Ecru",
+      sizes: [{id: 1, size: "S", count: 2},{id: 2, size: "M", count: 2},{id: 3, size: "L", count: 2}],
+      description:'Description Sample'
+    },
+    {
+      id: 2,
+      name: "White Ruffle Blouse",
+      price: "$194.00",
+      image: `${WhiteBlouse1}`,
+      brand: "Ecru",
+      sizes: [{id: 1, size: "S", count: 2},{id: 2, size: "M", count: 2},{id: 3, size: "L", count: 2}],
+      description:'Description Sample'
+    },
+    {
+      id: 3,
+      name: "Sport Stripe Regent Pants",
+      price: "$180.00",
+      image: `${StripePant1}`,
+      brand: "Ecru",
+      sizes: [{id: 1, size: "S", count: 2},{id: 2, size: "M", count: 2},{id: 3, size: "L", count: 2}],
+      description:'Description Sample'
+    },]
   }
   static contextType = ApiContext;
 
@@ -41,7 +70,7 @@ export default class App extends React.Component {
     return (<>
         <Route exact path="/" component={Main} />
         <Route path="/products/:filter" component={Products}/>
-        <Route path="/product" component={Product}/>
+        <Route path="/product/:id" component={Product}/>
         <Route path="/cart" component={Cart}/>
         </>
     );
@@ -55,7 +84,8 @@ export default class App extends React.Component {
       cartItems: this.state.cartItems,
       handleDeleteItem: this.handleDeleteItem,
       handleAddItem: this.handleAddItem,
-      cartTotal: cartTotal
+      cartTotal: cartTotal,
+      inventory:this.state.inventory
     }}
   >
     <div className="App">

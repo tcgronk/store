@@ -9,7 +9,7 @@ class InventoryPreview extends React.Component {
       <div className="InventoryPreview" >
         <div className="container">
         {lists.map((list) => (
-          <Link to={`/product/:${list.id}`}  >
+          <Link to={`/product/:${list.id}`}>
             <div key={list.id}  >
             <img className="ProductPreview" src={list.image} alt="inventory-preview" /> 
             <h2>{list.name}</h2>

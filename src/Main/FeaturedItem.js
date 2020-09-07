@@ -32,8 +32,8 @@ class FeaturedItem extends React.Component {
         this.context.handleAddItem(this.state.item)
     }
   render() {
-      let item=this.props.item
-      let sizes=this.props.item.sizes
+      let item=this.props.item[0]
+      let sizes=this.props.item[0].sizes
     return (
       <div className="FeaturedItem">
           <div className="FeaturedItem-Preview" >
@@ -61,7 +61,10 @@ class FeaturedItem extends React.Component {
             <button id={item.id} onClick={(e)=>this.handleAddFeaturedItem(e)}>Add to Cart</button>
             </form>
             <br/>
-            <Link to={`/product/:${item.id}`}> See Full Details <FontAwesomeIcon icon={faLongArrowAltRight}></FontAwesomeIcon></Link>
+            {this.props.full
+            ? (<p>{item.description}</p>)
+            :(<Link to={`/product/:${item.id}`}> See Full Details <FontAwesomeIcon icon={faLongArrowAltRight}></FontAwesomeIcon></Link>)
+            }
             </div>
             </div>
         </div>
