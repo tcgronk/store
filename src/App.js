@@ -53,10 +53,8 @@ export default class App extends React.Component {
   static contextType = ApiContext;
 
   handleDeleteItem=({target})=>{
-    console.log(target)
-    console.log(this.state.cartItems)
     let newItems= this.state.cartItems.filter(function(cartItem){
-        return cartItem.id != target.id
+        return cartItem.id !== parseInt(target.id)
     })
     this.setState({cartItems: newItems})
 }

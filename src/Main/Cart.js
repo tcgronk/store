@@ -16,7 +16,7 @@ class Cart extends React.Component {
           </h1>
             {items.map((item)=>(
                 
-                <div id={item.item.id} className="CartItem">
+                <div id={item.item.id} className="CartItem"  key={item.item.id} >
                     <Link to={`/product/:${item.item.id}`}>
                 <p>Product Name: {item.item.name}</p>
                 <p>Size: {item.item.size}</p>
