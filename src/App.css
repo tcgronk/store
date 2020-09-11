@@ -6,11 +6,13 @@
   font-family: 'Playfair Display', serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
+a:link, a:visited{
+  text-decoration: none;
+  color: #0B1D6F
+  }
+a:hover{
+color: black
+  }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
