@@ -17,13 +17,21 @@ class Cart extends React.Component {
             {items.map((item)=>(
                 
                 <div id={item.item.id} className="CartItem"  key={item.item.id} >
+                  <div className='horizontal'>
+
                     <Link to={`/product/:${item.item.id}`}>
+                    <div className='vertical'>
+
                 <p>Product Name: {item.item.name}</p>
+                </div>
+
                 <p>Size: {item.item.size}</p>
-                <p >{item.item.count} </p>
-                <p>${(item.item.price).toFixed(2)}</p></Link>
-                <button id= {item.id} onClick={(e)=> this.context.handleDeleteItem(e)}>Delete</button>
-                
+
+
+                <p>${(item.item.price).toFixed(2)}</p>
+                </Link>
+                <button className="DeleteButton" id= {item.id} onClick={(e)=> this.context.handleDeleteItem(e)}>Delete</button>
+                </div>
                 </div>
                 
             ))}
