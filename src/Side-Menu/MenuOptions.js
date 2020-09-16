@@ -12,7 +12,7 @@ class MenuOptions extends React.Component {
       <div className="MenuOptions">
         <ul>
           {lists.map((list) => (
-            <li key={list.name}>
+            <li key={list.name} className='listItem'>
                 {list.icon || list.cart===false
                 ?(<Link to={`/${list.name}`}>
                   <FontAwesomeIcon icon={list.icon}>{" "}</FontAwesomeIcon>

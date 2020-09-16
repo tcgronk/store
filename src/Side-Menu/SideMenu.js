@@ -17,10 +17,11 @@ render(){
   return (
     <div className="SideMenu">
         <Link to='/'><img className='Logo' src={logo} alt='company-logo'/></Link>
+        <div className="SideMenu-lists">
         <MenuOptions list={list1}/>
-        <p className='Accent'>____</p>
+        <p className='Accent'></p>
         <MenuOptions list={list2}/>
-        <br/><br/><br/><br/>
+        </div>
     </div>
   );
 }

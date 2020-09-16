@@ -4,6 +4,10 @@ li > a:visited {
   text-decoration: none;
   color: black;
 }
+.MenuOptions, .listItem{
+  padding-bottom: 15px;
+}
+
 .MenuOptions{
-  padding-bottom: 5%;
+  padding-top: 10px;
 }
