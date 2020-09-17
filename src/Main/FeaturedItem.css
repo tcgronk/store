@@ -20,6 +20,7 @@
     } 
     .FeaturedPreviewPhoto{
         width: 300px;
+        max-height: 415px;
         margin: 0 8% 8% 0;
     }
 
