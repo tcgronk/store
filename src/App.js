@@ -12,7 +12,7 @@ import ApiContext from "./ApiContext"
 import BlueBlouse1 from "./Main/BlueBlouse1.jpg";
 import WhiteBlouse1 from "./Main/WhiteBlouse1.jpg";
 import StripePant1 from "./Main/StripePant1.jpg";
-
+import style from "./Style"
 // need to write code to reduce inventory for purchased stock
 
 export default class App extends React.Component {
@@ -76,7 +76,8 @@ export default class App extends React.Component {
   render(){
     let cartTotal= this.state.cartItems.map((cartItem)=>(cartItem.item.count)).reduce((a,b)=>a+b,0)
     let cartTotalDollars= this.state.cartItems.map((cartItem)=>(cartItem.item.price)).reduce((a,b)=>a+b,0)
-  return (
+  console.log(style)
+    return (
     <ApiContext.Provider
     value={{
       cartItems: this.state.cartItems,
@@ -90,7 +91,7 @@ export default class App extends React.Component {
     <div className="App">
       
       <TopMenu/>
-      <p className='Sales-Banner'>
+      <p style={style.accentFont} className='Sales-Banner'>
         Free Shipping on all sales!
       </p>
       <div className='Outline'>
